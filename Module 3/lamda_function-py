@@ -1,0 +1,48 @@
+#lambda
+
+# def doubled(x):
+#     return x*2
+
+#same as above function
+doubled= lambda num:num*2
+squared=lambda num:num*num
+
+result=doubled(39)
+output=squared(9)
+print(result,output)
+
+add=lambda x,y,z:x+y+z
+
+print(add(10,20,30))
+
+
+
+#map function
+doubled= lambda num:num*2
+numbers=[10,35,62,39]
+# doubled_nums=map(doubled,numbers)#parameter(function,iterable)
+doubled_nums=map(lambda x:x*2,numbers)
+print(numbers)
+print(list(doubled_nums))
+
+
+
+actors=[
+{'name':'Sabina','age':65},
+{'name':'Sabnur','age':45},
+{'name':'Srabonti','age':72},
+{'name':'Shanur','age':40},
+]
+#filter use condition but map have not condition
+juniors=filter(lambda actor:actor['age']<46,actors)
+print(list(juniors))
+
+#From anisul islam
+n=input()
+
+list=n.split()
+sum=0
+for num in list:
+    print(int (num))
+    sum=sum+int (num)
+print(sum)
